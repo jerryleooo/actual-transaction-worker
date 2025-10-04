@@ -13,11 +13,12 @@ export async function save_actual_transaction(env, json) {
         "x-api-key": env.ACTUAL_API_KEY,
     };
     console.log(`headers: ${JSON.stringify(headers)}`);
-    return await fetch(base_url, {
+    const response = await fetch(base_url, {
         method: "POST",
         headers: headers,
         body: JSON.stringify(json),
     });
+    return response;
 }
 
 export async function message_category_budget(env, transaction_json) {
