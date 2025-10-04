@@ -3,8 +3,8 @@ main = "src/index.js"
 compatibility_date = "2024-05-24"
 
 [vars]
-OPENAI_KEY="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"
-OPENAI_API_KEY="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"
+OPENAI_KEY="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"
+OPENAI_API_KEY="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"
 OPENAI_ORG="org-YI06bweqJ9ZwGVyTYe3X1TaP"
 TG_BOT_TOKEN="8267155122:AAE9LsrqBc-tMzKge2GqdqGCeIZsioDsS6U"
 TG_CHAT_ID="1194216846"
