@@ -18,7 +18,7 @@ export async function save_actual_transaction(env, json) {
         headers: headers,
         body: JSON.stringify(json),
     });
-    console.log(response);
+    console.log(JSON.stringify(response));
     return response;
 }
 
