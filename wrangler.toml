@@ -11,3 +11,7 @@ TG_CHAT_ID="1194216846"
 ACTUAL_API_KEY="31a69feede0034113a9259cfa31396fc"
 ACTUAL_ENCRYPTION_PASSWORD="geekback"
 ACTUAL_BASE="http://37.27.18.247:5007/v1/budgets/5e3d0cb1-b508-49fe-a0ca-f9a3610be5a8"
+
+[observability]
+enabled = true
+head_sampling_rate = 1 # optional. default = 1.
