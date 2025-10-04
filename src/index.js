@@ -36,7 +36,7 @@ async function convert_transaction(env, message) {
             },
             { role: "user", content: message },
         ],
-        model: "gpt-3.5-turbo",
+        model: "gpt-4",
         response_format: { type: "json_object" },
     });
     console.log(completion.choices[0].message.content);
