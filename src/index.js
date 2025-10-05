@@ -50,6 +50,7 @@ async function convert_transaction(env, message) {
 
 export default {
     async fetch(request, env, ctx) {
+        let chatId = env.TG_CHAT_ID;
         try {
 			// 验证 token，提高 worker 后端安全性
 			try {
@@ -73,6 +74,9 @@ export default {
 			// 读取 request 内容
             const body = await request.json();
             console.log(body);
+            if (body?.message?.chat?.id) {
+                chatId = body.message.chat.id;
+            }
             const text = body.message.text;
             console.log(`Message text: ${text}`);
 
@@ -85,9 +89,9 @@ export default {
                 console.log(
                     `Found Reply Message: \n${body.message.reply_to_message.text}`
                 );
-                const originalTransaction = JSON.parse(
-                    body.message.reply_to_message.text
-                );
+				const originalTransaction = JSON.parse(
+					body.message.reply_to_message.text
+				);
                 const response = await save_actual_transaction(
                     env,
                     originalTransaction
@@ -97,16 +101,17 @@ export default {
 				// 如果保存失败，则返回记账失败和错误信息
 				const response_body = await readResponseBody(response);
                 if (response.ok) {
-					await sendMessage(env, `记账成功！`);
+					await sendMessage(env, `记账成功！`, chatId);
                     const post_message = await message_category_budget(
                         env,
                         originalTransaction
                     );
-                    await sendMessage(env, post_message);
+                    await sendMessage(env, post_message, chatId);
                 } else {
                     await sendMessage(
                         env,
-                        formatFailureMessage(response.status, response_body)
+                        formatFailureMessage(response.status, response_body),
+                        chatId
                     );
                 }
 
@@ -114,7 +119,7 @@ export default {
             }
 
 			// 对于其他提交的消息，分析可能的账务记录，转换为 Json
-			await sendMessage(env, `报文识别转换中，请稍后……`)
+			await sendMessage(env, `报文识别转换中，请稍后……`, chatId)
             const transaction_base = await convert_transaction(env, text);
             //await sendMessage(env, message);
             console.log(`transaction_base: ${transaction_base}`);
@@ -125,13 +130,17 @@ export default {
             console.log(
                 `transaction_full: ${JSON.stringify(transaction_json)}`
             );
-            await sendMessage(env, JSON.stringify(transaction_json, null, 2)); //, null, 2)
+            await sendMessage(
+                env,
+                JSON.stringify(transaction_json, null, 2),
+                chatId
+            ); //, null, 2)
 
             return new Response("Completed.", { status: 200 });
         } catch (e) {
             const detailedError = errorToString(e);
             console.log(detailedError);
-			await sendMessage(env, `出现未知错误：${detailedError}`); 
+			await sendMessage(env, `出现未知错误：${detailedError}`, chatId); 
             return new Response(detailedError, { status: 200 });
         }
     },

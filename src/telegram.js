@@ -1,6 +1,7 @@
 
-export async function sendMessage(env, text) {
-    console.log(`sending ${text} to ${env.TG_CHAT_ID}`);
+export async function sendMessage(env, text, chatId) {
+    const targetChatId = chatId ?? env.TG_CHAT_ID;
+    console.log(`sending ${text} to ${targetChatId}`);
     return await fetch(
         `https://api.telegram.org/bot${env.TG_BOT_TOKEN}/sendMessage`,
         {
@@ -11,7 +12,7 @@ export async function sendMessage(env, text) {
             body: JSON.stringify({
                 method: "post",
                 text: text,
-                chat_id: env.TG_CHAT_ID,
+                chat_id: targetChatId,
                 //parse_mode: "Markdown",
             }),
         }
