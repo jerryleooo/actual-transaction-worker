@@ -120,9 +120,10 @@ export default {
 
             return new Response("Completed.", { status: 200 });
         } catch (e) {
-            console.log(errorToString(e));
-			await sendMessage(env, `出现未知错误：${e.message}`); 
-            return new Response(errorToString(e), { status: 200 });
+            const detailedError = errorToString(e);
+            console.log(detailedError);
+			await sendMessage(env, `出现未知错误：${detailedError}`); 
+            return new Response(detailedError, { status: 200 });
         }
     },
 };
