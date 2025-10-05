@@ -18,7 +18,8 @@ export async function save_actual_transaction(env, json) {
         headers: headers,
         body: JSON.stringify(json),
     });
-    console.log(`response: ${JSON.stringify(response)}, ${response.status}`);
+    const responseText = await response.clone().text();
+    console.log(`response: status=${response.status}, body=${responseText}`);
     return response;
 }
 

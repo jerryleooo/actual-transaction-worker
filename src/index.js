@@ -85,20 +85,29 @@ export default {
                 console.log(
                     `Found Reply Message: \n${body.message.reply_to_message.text}`
                 );
+                const originalTransaction = JSON.parse(
+                    body.message.reply_to_message.text
+                );
                 const response = await save_actual_transaction(
                     env,
-                    JSON.parse(body.message.reply_to_message.text)
+                    originalTransaction
                 );
-				
+
 				// 如果保存成功，则返回记账成功的提示，并查询相关的预算使用情况
 				// 如果保存失败，则返回记账失败和错误信息
-				const response_body = await response.json();
-                if (response.status == 200) {
+				const response_body = await readResponseBody(response);
+                if (response.ok) {
 					await sendMessage(env, `记账成功！`);
-                    const post_message = await message_category_budget(env, JSON.parse(body.message.reply_to_message.text));
+                    const post_message = await message_category_budget(
+                        env,
+                        originalTransaction
+                    );
                     await sendMessage(env, post_message);
                 } else {
-                    await sendMessage(env, `记账失败: ${response_body}`);
+                    await sendMessage(
+                        env,
+                        formatFailureMessage(response.status, response_body)
+                    );
                 }
 
                 return new Response("Transaction Saved.", { status: 200 });
@@ -145,4 +154,32 @@ function errorToString(e) {
         stack: e.stack,
         from: "error worker",
     });
+}
+
+async function readResponseBody(response) {
+	const contentType = response.headers.get("content-type") || "";
+	const raw = await response.text();
+	if (!raw) {
+		return raw;
+	}
+	if (contentType.includes("application/json")) {
+		try {
+			return JSON.parse(raw);
+		} catch (parseError) {
+			console.log(
+				`Failed to parse JSON response: ${
+					parseError instanceof Error ? parseError.message : parseError
+				}`
+			);
+		}
+	}
+	return raw;
+}
+
+function formatFailureMessage(status, body) {
+	const detail =
+		typeof body === "string" && body.trim().length > 0
+			? body
+			: JSON.stringify(body ?? {});
+	return `记账失败（${status}）: ${detail}`;
 }
