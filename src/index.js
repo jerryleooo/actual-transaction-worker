@@ -124,7 +124,7 @@ export default {
             //await sendMessage(env, message);
             console.log(`transaction_base: ${transaction_base}`);
 
-            const transaction_json = process_transaction(
+            const transaction_json = await process_transaction(
                 JSON.parse(transaction_base)
             );
             console.log(
