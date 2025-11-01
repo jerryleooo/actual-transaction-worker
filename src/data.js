@@ -1,196 +1,193 @@
 export const accounts = {
-    "data": [
-      {
-        "id": "c4716dbf-4ad3-40eb-a989-4df6e4404082",
-        "name": "房产 - 柳映坊",
-        "offbudget": true,
-        "closed": false
-      },
-      {
-        "id": "0d2cdd9a-5ac7-4062-b809-89c0e13eb8aa",
-        "name": "余额宝",
-        "offbudget": false,
-        "closed": false
-      },
-      {
-        "id": "f4d1ae4d-3430-4234-b9db-7c437d7566d7",
-        "name": "工行储蓄卡",
-        "offbudget": false,
-        "closed": false
-      },
-      {
-        "id": "a2bb50ef-c048-4192-bcbf-28b1a5d7b83f",
-        "name": "房产 - 汀岸芷兰轩",
-        "offbudget": true,
-        "closed": false
-      },
-      {
-        "id": "79fc43b0-80e9-4779-9b14-ee6b32fc1434",
-        "name": "工行信用卡",
-        "offbudget": false,
-        "closed": false
-      },
-      {
-        "id": "b3d46b7d-7a3e-44c5-98a7-c4a93cd12dc1",
-        "name": "贷款 - 汀岸芷兰轩按揭",
-        "offbudget": true,
-        "closed": false
-      },
-      {
-        "id": "8c219906-5c1c-4c0c-8954-736d513b2421",
-        "name": "建设银行储蓄卡",
-        "offbudget": false,
-        "closed": false
-      },
-      {
-        "id": "cf141507-46be-45e1-b450-df0413e13fb1",
-        "name": "贷款 - 汀岸芷兰轩车位",
-        "offbudget": true,
-        "closed": false
-      },
-      {
-        "id": "6085cccc-d36d-46f0-8cde-ee1ec99e485b",
-        "name": "萧山农商银行储蓄卡",
-        "offbudget": false,
-        "closed": false
-      },
-      {
-        "id": "6dca2a43-16ff-420b-a48d-5f71cdc2a50b",
-        "name": "贷款 - 杭州联合银行",
-        "offbudget": true,
-        "closed": false
-      },
-      {
-        "id": "d109413a-c64c-4750-9009-b40dadccb803",
-        "name": "杭州联合银行储蓄卡",
-        "offbudget": false,
-        "closed": false
-      },
-      {
-        "id": "c4c61082-7379-41f2-8430-abe50b02ef69",
-        "name": "贷款 - 邮储银行",
-        "offbudget": true,
-        "closed": false
-      },
-      {
-        "id": "843bb6a8-2c6c-4bf8-9d0a-e7348be38ca6",
-        "name": "邮储银行储蓄卡",
-        "offbudget": false,
-        "closed": false
-      },
-      {
-        "id": "03964684-8ce2-4b55-bdf8-a497bf2d079e",
-        "name": "贷款 - 宁波银行",
-        "offbudget": true,
-        "closed": false
-      },
-      {
-        "id": "886d369e-5ba1-489b-acf4-c5282ed1ac1f",
-        "name": "邮储银行信用卡",
-        "offbudget": false,
-        "closed": false
-      },
-      {
-        "id": "6c3c1768-2e3f-43ff-8857-fe39a789a17d",
-        "name": "贷款 - 萧山农商行(WJ)",
-        "offbudget": true,
-        "closed": false
-      },
-      {
-        "id": "1ce7d53d-5da0-4230-bd80-43ed1714a77d",
-        "name": "广发银行信用卡 Safari",
-        "offbudget": false,
-        "closed": false
-      },
-      {
-        "id": "f8a34271-2d8e-45bd-8219-b7aca8fd3c2b",
-        "name": "贷款 - 华夏银行(WJ)",
-        "offbudget": true,
-        "closed": false
-      },
-      {
-        "id": "4b51f6eb-5442-4f93-aa16-8a29556220d7",
-        "name": "中信银行信用卡 万豪",
-        "offbudget": false,
-        "closed": false
-      },
-      {
-        "id": "f96d2e3d-4b3a-4880-9375-ac2d0ab92a88",
-        "name": "贷款 - 工行信用卡装修",
-        "offbudget": true,
-        "closed": false
-      },
-      {
-        "id": "6a157087-d732-4a99-9ddf-7a280d06fb95",
-        "name": "中信银行信用卡 i白金",
-        "offbudget": false,
-        "closed": false
-      },
-      {
-        "id": "f4a3090c-83a7-46ba-aedb-aa1a050e5332",
-        "name": "宁波银行信用卡",
-        "offbudget": false,
-        "closed": false
-      },
-      {
-        "id": "9e889dc2-7087-413d-870b-bb180fdd5000",
-        "name": "南京银行信用卡",
-        "offbudget": false,
-        "closed": false
-      }
-    ]
-  }
+    data: [
+        {
+            id: "4b51f6eb-5442-4f93-aa16-8a29556220d7",
+            name: "xixi lady card",
+            offbudget: false,
+            closed: false,
+        },
+        {
+            id: "f2bb2e54-6322-406d-8279-f729d2f8ad7e",
+            name: "xixi ocbc card",
+            offbudget: false,
+            closed: false,
+        },
+        {
+            id: "94ffd0f0-5ab6-406e-ace1-9367267a385e",
+            name: "xixi simplygo account",
+            offbudget: false,
+            closed: false,
+        },
+        {
+            id: "3edf414d-f7e2-4555-9b75-bae6b6af5b2e",
+            name: "yang simplygo account",
+            offbudget: false,
+            closed: false,
+        },
+        {
+            id: "615d8b25-09d5-4d12-b285-1ca8b476338c",
+            name: "yang lady card",
+            offbudget: false,
+            closed: false,
+        },
+        {
+            id: "845d65d7-4fab-4907-a49f-f0e0230bbb5e",
+            name: "yang uob one account",
+            offbudget: false,
+            closed: false,
+        },
+        {
+            id: "2562e1e8-8887-4aac-8678-2c55431f9e3c",
+            name: "xixi uob one account",
+            offbudget: false,
+            closed: false,
+        },
+        {
+            id: "76eaf521-e1f9-4f7e-af1a-4e92651647fa",
+            name: "yang ocbc card",
+            offbudget: false,
+            closed: false,
+        },
+        {
+            id: "f7ab1cb7-7288-4e02-83ef-323154835d4f",
+            name: "yang trust card",
+            offbudget: false,
+            closed: false,
+        },
+        {
+            id: "41d48115-32cf-49eb-aee5-1c203edf3a71",
+            name: "xixi trust card",
+            offbudget: false,
+            closed: false,
+        },
+        {
+            id: "ff6e0c3d-991b-4d28-95f3-2fee185fefc1",
+            name: "xixi yuu card",
+            offbudget: false,
+            closed: false,
+        },
+        {
+            id: "5910f35c-b3f7-4e7c-8b09-52c6811839ee",
+            name: "alipay",
+            offbudget: false,
+            closed: false,
+        },
+    ],
+};
 
 export const categories = {
-  "data": [
-    {
-      "id": "541836f1-e756-4473-a5d0-6c1d3f06c7fa",
-      "name": "Food",
-      "is_income": false,
-      "hidden": false,
-      "group_id": "fc3825fd-b982-4b72-b768-5b30844cf832"
-    },
-    {
-      "id": "af375fd4-d759-46b3-bffe-74a856151d57",
-      "name": "General",
-      "is_income": false,
-      "hidden": false,
-      "group_id": "fc3825fd-b982-4b72-b768-5b30844cf832"
-    },
-    {
-      "id": "d4b0f075-3343-4408-91ed-fae94f74e5bf",
-      "name": "Bills",
-      "is_income": false,
-      "hidden": false,
-      "group_id": "fc3825fd-b982-4b72-b768-5b30844cf832"
-    },
-    {
-      "id": "29ec2c58-8cd3-42fe-9187-7b5dfe0f70a6",
-      "name": "Bills (Flexible)",
-      "is_income": false,
-      "hidden": false,
-      "group_id": "fc3825fd-b982-4b72-b768-5b30844cf832"
-    },
-    {
-      "id": "6bbd8472-25d4-4cee-8a11-5bd9f7e83d61",
-      "name": "Savings",
-      "is_income": false,
-      "hidden": false,
-      "group_id": "a137772f-cf2f-4089-9432-822d2ddc1466"
-    },
-    {
-      "id": "3c1699a5-522a-435e-86dc-93d900a14f0e",
-      "name": "Income",
-      "is_income": true,
-      "hidden": false,
-      "group_id": "2E1F5BDB-209B-43F9-AF2C-3CE28E380C00"
-    },
-    {
-      "id": "506e8d9d-7ed0-4397-84e4-07a9185dc6b2",
-      "name": "Starting Balances",
-      "is_income": true,
-      "hidden": false,
-      "group_id": "2E1F5BDB-209B-43F9-AF2C-3CE28E380C00"
-    }
-  ]
-}
+    data: [
+        {
+            id: "d0ac24a0-9a69-46de-b647-d9613eb53f08",
+            name: "Entertainment",
+            is_income: false,
+            hidden: false,
+            group_id: "fc3825fd-b982-4b72-b768-5b30844cf832",
+        },
+        {
+            id: "41456499-bdee-4307-ba32-a81131b68384",
+            name: "Education",
+            is_income: false,
+            hidden: false,
+            group_id: "fc3825fd-b982-4b72-b768-5b30844cf832",
+        },
+        {
+            id: "6054e22f-b618-4fa7-a301-1ca0953cf4ae",
+            name: "Sports",
+            is_income: false,
+            hidden: false,
+            group_id: "fc3825fd-b982-4b72-b768-5b30844cf832",
+        },
+        {
+            id: "9f181c24-370d-4b8b-ba09-1d76bf077016",
+            name: "Housing payment",
+            is_income: false,
+            hidden: false,
+            group_id: "fc3825fd-b982-4b72-b768-5b30844cf832",
+        },
+        {
+            id: "cf7a4f97-180f-4671-8b97-0c3859070cb1",
+            name: "Travel",
+            is_income: false,
+            hidden: false,
+            group_id: "fc3825fd-b982-4b72-b768-5b30844cf832",
+        },
+        {
+            id: "928141d6-d861-47b3-afc3-7c1468ebb3f7",
+            name: "Insurance",
+            is_income: false,
+            hidden: false,
+            group_id: "fc3825fd-b982-4b72-b768-5b30844cf832",
+        },
+        {
+            id: "c291944f-d8b0-497e-8c2e-6934c2265b98",
+            name: "Tax Payment",
+            is_income: false,
+            hidden: false,
+            group_id: "fc3825fd-b982-4b72-b768-5b30844cf832",
+        },
+        {
+            id: "9de95271-ec0a-4d22-8359-2e3b8dce8b4b",
+            name: "Transport",
+            is_income: false,
+            hidden: false,
+            group_id: "fc3825fd-b982-4b72-b768-5b30844cf832",
+        },
+        {
+            id: "3c0c18f4-d99d-44b2-81a2-e09f4eea14d7",
+            name: "SG shopping",
+            is_income: false,
+            hidden: false,
+            group_id: "fc3825fd-b982-4b72-b768-5b30844cf832",
+        },
+        {
+            id: "b4a01768-d90d-49bb-bd5e-6e7a6d7da563",
+            name: "CN shopping",
+            is_income: false,
+            hidden: false,
+            group_id: "fc3825fd-b982-4b72-b768-5b30844cf832",
+        },
+        {
+            id: "541836f1-e756-4473-a5d0-6c1d3f06c7fa",
+            name: "Food",
+            is_income: false,
+            hidden: false,
+            group_id: "fc3825fd-b982-4b72-b768-5b30844cf832",
+        },
+        {
+            id: "af375fd4-d759-46b3-bffe-74a856151d57",
+            name: "General",
+            is_income: false,
+            hidden: false,
+            group_id: "fc3825fd-b982-4b72-b768-5b30844cf832",
+        },
+        {
+            id: "d4b0f075-3343-4408-91ed-fae94f74e5bf",
+            name: "Family Bills",
+            is_income: false,
+            hidden: false,
+            group_id: "fc3825fd-b982-4b72-b768-5b30844cf832",
+        },
+        {
+            id: "6bbd8472-25d4-4cee-8a11-5bd9f7e83d61",
+            name: "Savings",
+            is_income: false,
+            hidden: false,
+            group_id: "a137772f-cf2f-4089-9432-822d2ddc1466",
+        },
+        {
+            id: "3c1699a5-522a-435e-86dc-93d900a14f0e",
+            name: "Income",
+            is_income: true,
+            hidden: false,
+            group_id: "2E1F5BDB-209B-43F9-AF2C-3CE28E380C00",
+        },
+        {
+            id: "506e8d9d-7ed0-4397-84e4-07a9185dc6b2",
+            name: "Starting Balances",
+            is_income: true,
+            hidden: false,
+            group_id: "2E1F5BDB-209B-43F9-AF2C-3CE28E380C00",
+        },
+    ],
+};
