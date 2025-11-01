@@ -1,4 +1,4 @@
-import { getAccounts, getCategories } from "./data";
+import { accounts, categories } from "./data";
 
 export async function save_actual_transaction(env, json) {
     delete json.transaction.account_name;
@@ -52,22 +52,17 @@ function getCurrentMonthFormatted() {
     return `${year}-${month}`;
 }
 
-export async function process_transaction(obj) {
+export function process_transaction(obj) {
     // 检查传入的参数是否是对象
     if (typeof obj === "object" && obj !== null) {
         // 为对象增加一个属性，属性值为字符串 'abc'
         obj.transaction.date = getCurrentDateFormatted();
-        const [accounts, categories] = await Promise.all([
-            getAccounts(),
-            getCategories(),
-        ]);
-
         obj.transaction.account = findIdByName(
-            accounts,
+            accounts.data,
             obj.transaction.account_name
         );
         obj.transaction.category = findIdByName(
-            categories,
+            categories.data,
             obj.transaction.category_name
         );
         obj.transaction.amount = Number((obj.transaction.amount * 100).toFixed(0));
